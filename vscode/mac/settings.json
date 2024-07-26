@@ -10,8 +10,8 @@
   "editor.formatOnType": false,
   "editor.fontSize": 16,
   "editor.tabSize": 2,
-  "editor.letterSpacing": 0.35,
-  "editor.lineHeight": 25,
+  "editor.letterSpacing": 0.4,
+  "editor.lineHeight": 26,
   "editor.fontWeight": "300",
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
@@ -143,274 +143,136 @@
   "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "<c-j>"
-      ],
-      "commands": [
-        {
-          "command": "selectNextSuggestion",
-          "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-        }
-      ]
+      "before": ["<c-j>"],
+      "after": ["<cr>"]
     },
     {
-      "before": [
-        "<c-k>"
-      ],
-      "commands": [
-        {
-          "command": "selectPrevSuggestion",
-          "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-        }
-      ]
-    },
-    {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "leader",
-        "r"
-      ],
-      "commands": [
-        "editor.action.rename"
-      ]
+      "before": ["leader", "t", "c"],
+      "commands": ["workbench.action.closePanel"]
     },
     {
-      "before": [
-        "leader",
-        "w"
-      ],
-      "commands": [
-        ":w!"
-      ]
+      "before": ["leader", "c"],
+      "commands": ["workbench.action.closeActiveEditor"]
     },
     {
-      "before": [
-        "leader",
-        "q"
-      ],
-      "commands": [
-        ":wq!"
-      ]
+      "before": ["leader", "c"],
+      "commands": ["workbench.action.closeActiveEditor"]
     },
     {
-      "before": [
-        "<c-a>"
-      ],
-      "after": [
-        "g",
-        "g",
-        "V",
-        "G"
-      ]
+      "before": ["leader", "C"],
+      "commands": ["workbench.action.closeOtherEditors"]
     },
     {
-      "before": [
-        "f"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "s"
-      ]
+      "before": ["leader", "r"],
+      "commands": ["code-runner.run"]
     },
     {
-      "before": [
-        "leader",
-        "s",
-        "c"
-      ],
-      "commands": [
-        ":nohl"
-      ]
+      "before": ["leader", "w"],
+      "commands": [":w!"]
     },
     {
-      "before": [
-        "leader",
-        "l"
-      ],
-      "after": [
-        "g",
-        "t"
-      ]
+      "before": ["leader", "q"],
+      "commands": [":wq!"]
     },
     {
-      "before": [
-        "leader",
-        "h"
-      ],
-      "after": [
-        "g",
-        "T"
-      ]
+      "before": ["<c-a>"],
+      "after": ["g", "g", "V", "G"]
     },
     {
-      "before": [
-        "leader",
-        "s",
-        "c"
-      ],
-      "commands": [
-        ":nohl"
-      ]
+      "before": ["f"],
+      "after": ["<leader>", "<leader>", "s"]
     },
     {
-      "before": [
-        "f"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "s"
-      ]
+      "before": ["leader", "s", "c"],
+      "commands": [":nohl"]
     },
     {
-      "before": [
-        "K"
-      ],
-      "commands": [
-        "editor.action.showHover"
-      ]
+      "before": ["leader", "l"],
+      "after": ["g", "t"]
     },
     {
-      "before": [
-        "[",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.prev"
-      ]
+      "before": ["leader", "h"],
+      "after": ["g", "T"]
     },
     {
-      "before": [
-        "]",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.next"
-      ]
+      "before": ["f"],
+      "after": ["<leader>", "<leader>", "s"]
     },
     {
-      "before": [
-        "<leader>",
-        "a"
-      ],
-      "commands": [
-        "editor.action.quickFix"
-      ]
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
     },
     {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "^"
-      ]
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
     },
     {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
     },
     {
-      "before": [
-        "<leader>",
-        "u"
-      ],
-      "after": [
-        "~"
-      ]
+      "before": ["<leader>", "a"],
+      "commands": ["editor.action.quickFix"]
     },
     {
-      "before": [
-        "leader",
-        "i"
-      ],
-      "commands": [
-        "extension.toggleBool"
-      ]
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["<leader>", "u"],
+      "after": ["~"]
+    },
+    {
+      "before": ["leader", "i"],
+      "commands": ["extension.toggleBool"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "^"
-      ]
+      "before": ["H"],
+      "after": ["^"]
     },
     {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": ["L"],
+      "after": ["$"]
     }
   ],
   "vim.operatorPendingModeKeyBindings": [
     {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "^"
-      ]
+      "before": ["H"],
+      "after": ["^"]
     },
     {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": ["L"],
+      "after": ["$"]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        ">"
-      ],
-      "commands": [
-        "editor.action.indentLines"
-      ]
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
     },
     {
-      "before": [
-        "<"
-      ],
-      "commands": [
-        "editor.action.outdentLines"
-      ]
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
     }
   ],
   "vim.operatorPendingModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "("
-      ],
-      "after": [
-        "i("
-      ]
+      "before": ["("],
+      "after": ["i("]
     }
   ],
-  "vim.handleKeys": {
-    "<C-f>": false,
-    "<C-p>": false
-  },
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
@@ -425,5 +287,10 @@
   "workbench.activityBar.location": "top",
   "workbench.startupEditor": "none",
   "workbench.sideBar.location": "right",
-  "window.density.editorTabHeight": "compact"
+  "workbench.iconTheme": "vscode-icons",
+  "debug.allowBreakpointsEverywhere": true,
+  "telemetry.telemetryLevel": "off",
+  "window.density.editorTabHeight": "compact",
+  "workbench.colorTheme": "Everforest Dark",
+  "everforest.italicKeywords": true
 }
