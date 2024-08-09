@@ -143,134 +143,399 @@
   "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
     {
-      "before": ["<c-j>"],
-      "after": ["<cr>"]
+      "before": [
+        "<c-j>"
+      ],
+      "after": [
+        "<cr>"
+      ]
     },
     {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["leader", "t", "c"],
-      "commands": ["workbench.action.closePanel"]
+      "before": [
+        "\\"
+      ],
+      "after": [
+        "<c-w>",
+        "v"
+      ]
     },
     {
-      "before": ["leader", "c"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "before": [
+        "|"
+      ],
+      "after": [
+        "<c-w>",
+        "s"
+      ]
     },
     {
-      "before": ["leader", "c"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "before": [
+        "<c-h>"
+      ],
+      "after": [
+        "<c-w>",
+        "h"
+      ]
     },
     {
-      "before": ["leader", "C"],
-      "commands": ["workbench.action.closeOtherEditors"]
+      "before": [
+        "<c-l>"
+      ],
+      "after": [
+        "<c-w>",
+        "l"
+      ]
     },
     {
-      "before": ["leader", "r"],
-      "commands": ["code-runner.run"]
+      "before": [
+        "<c-j>"
+      ],
+      "after": [
+        "<c-w>",
+        "j"
+      ]
     },
     {
-      "before": ["leader", "w"],
-      "commands": [":w!"]
+      "before": [
+        "<c-k>"
+      ],
+      "after": [
+        "<c-w>",
+        "k"
+      ]
     },
     {
-      "before": ["leader", "q"],
-      "commands": [":wq!"]
+      "before": [
+        "leader",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
     },
     {
-      "before": ["<c-a>"],
-      "after": ["g", "g", "V", "G"]
+      "before": [
+        "leader",
+        "\\"
+      ],
+      "commands": [
+        "workbench.action.terminal.toggleTerminal"
+      ]
     },
     {
-      "before": ["f"],
-      "after": ["<leader>", "<leader>", "s"]
+      "before": [
+        "leader",
+        "t",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.closePanel"
+      ]
     },
     {
-      "before": ["leader", "s", "c"],
-      "commands": [":nohl"]
+      "before": [
+        "leader",
+        "f",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.findInFiles"
+      ]
     },
     {
-      "before": ["leader", "l"],
-      "after": ["g", "t"]
+      "before": [
+        "leader",
+        "f",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.replaceInFiles"
+      ]
     },
     {
-      "before": ["leader", "h"],
-      "after": ["g", "T"]
+      "before": [
+        "leader",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
     },
     {
-      "before": ["f"],
-      "after": ["<leader>", "<leader>", "s"]
+      "before": [
+        "leader",
+        "C"
+      ],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ]
     },
     {
-      "before": ["K"],
-      "commands": ["editor.action.showHover"]
+      "before": [
+        "leader",
+        "r",
+        "r"
+      ],
+      "commands": [
+        "code-runner.run"
+      ]
     },
     {
-      "before": ["[", "d"],
-      "commands": ["editor.action.marker.prev"]
+      "before": [
+        "leader",
+        "r",
+        "e"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
     },
     {
-      "before": ["]", "d"],
-      "commands": ["editor.action.marker.next"]
+      "before": [
+        "leader",
+        "r",
+        "f"
+      ],
+      "commands": [
+        "renameFile"
+      ],
+      "when": "filesExplorerFocus && !inputFocus"
     },
     {
-      "before": ["<leader>", "a"],
-      "commands": ["editor.action.quickFix"]
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
+        ":w!"
+      ]
     },
     {
-      "before": ["H"],
-      "after": ["^"]
+      "before": [
+        "leader",
+        "q"
+      ],
+      "commands": [
+        ":wq!"
+      ]
     },
     {
-      "before": ["L"],
-      "after": ["$"]
+      "before": [
+        "<c-a>"
+      ],
+      "after": [
+        "g",
+        "g",
+        "V",
+        "G"
+      ]
     },
     {
-      "before": ["<leader>", "u"],
-      "after": ["~"]
+      "before": [
+        "<c-u>"
+      ],
+      "after": [
+        "<c-u>",
+        "z",
+        "z"
+      ]
     },
     {
-      "before": ["leader", "i"],
-      "commands": ["extension.toggleBool"]
+      "before": [
+        "<c-d>"
+      ],
+      "after": [
+        "<c-d>",
+        "z",
+        "z"
+      ]
+    },
+    {
+      "before": [
+        "f"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "s"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "s",
+        "c"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "l"
+      ],
+      "after": [
+        "g",
+        "t"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "h"
+      ],
+      "after": [
+        "g",
+        "T"
+      ]
+    },
+    {
+      "before": [
+        "f"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "s"
+      ]
+    },
+    {
+      "before": [
+        "[",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "u"
+      ],
+      "after": [
+        "~"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "i"
+      ],
+      "commands": [
+        "extension.toggleBool"
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": ["H"],
-      "after": ["^"]
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
     },
     {
-      "before": ["L"],
-      "after": ["$"]
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
     }
   ],
   "vim.operatorPendingModeKeyBindings": [
     {
-      "before": ["H"],
-      "after": ["^"]
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
     },
     {
-      "before": ["L"],
-      "after": ["$"]
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [">"],
-      "commands": ["editor.action.indentLines"]
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
     },
     {
-      "before": ["<"],
-      "commands": ["editor.action.outdentLines"]
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
     }
   ],
   "vim.operatorPendingModeKeyBindingsNonRecursive": [
     {
-      "before": ["("],
-      "after": ["i("]
+      "before": [
+        "("
+      ],
+      "after": [
+        "i("
+      ]
     }
   ],
   "vim.handleKeys": {
@@ -298,5 +563,7 @@
   "telemetry.telemetryLevel": "off",
   "window.density.editorTabHeight": "compact",
   "workbench.colorTheme": "Everforest Dark",
-  "everforest.italicKeywords": true
+  "everforest.italicKeywords": true,
+  "search.mode": "reuseEditor",
+  "search.smartCase": true
 }
