@@ -72,7 +72,6 @@
   },
   "search.showLineNumbers": true,
   "errorLens.fontStyleItalic": true,
-  "breadcrumbs.enabled": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.autoUpdate": "onlyEnabledExtensions",
@@ -160,10 +159,10 @@
       ]
     }
   ],
-  "vim.normalModeKeyBindingsNonRecursive": [
+  "vim.normalModeKeyBindings": [
     {
       "before": [
-        "\\"
+        "|"
       ],
       "after": [
         "<c-w>",
@@ -172,7 +171,7 @@
     },
     {
       "before": [
-        "|"
+        "\\"
       ],
       "after": [
         "<c-w>",
@@ -218,19 +217,19 @@
     {
       "before": [
         "leader",
-        "o"
+        "e"
       ],
       "commands": [
-        "workbench.action.toggleSidebarVisibility"
+        "workbench.view.explorer"
       ]
     },
     {
       "before": [
         "leader",
-        "\\"
+        "o"
       ],
       "commands": [
-        "workbench.action.terminal.toggleTerminal"
+        "workbench.action.toggleSidebarVisibility"
       ]
     },
     {
@@ -241,6 +240,56 @@
       ],
       "commands": [
         "workbench.action.closePanel"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "t",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.togglePanel"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "f",
+        "H"
+      ],
+      "commands": [
+        "references-view.showCallHierarchy"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "f",
+        "R"
+      ],
+      "commands": [
+        "references-view.findReferences"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "f",
+        "r"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
       ]
     },
     {
@@ -299,8 +348,7 @@
       ],
       "commands": [
         "editor.action.rename"
-      ],
-      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+      ]
     },
     {
       "before": [
@@ -474,24 +522,6 @@
       ]
     }
   ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "^"
-      ]
-    },
-    {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
-    }
-  ],
   "vim.operatorPendingModeKeyBindings": [
     {
       "before": [
@@ -511,6 +541,22 @@
     }
   ],
   "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
     {
       "before": [
         ">"
@@ -549,15 +595,32 @@
   "git.openRepositoryInParentFolders": "never",
   "vsicons.dontShowNewVersionMessage": true,
   "liveServer.settings.donotVerifyTags": true,
-  "workbench.activityBar.location": "top",
+  "workbench.activityBar.location": "hidden",
   "workbench.startupEditor": "none",
-  "workbench.sideBar.location": "right",
   "workbench.iconTheme": "vscode-icons",
   "debug.allowBreakpointsEverywhere": true,
   "telemetry.telemetryLevel": "off",
-  "window.density.editorTabHeight": "compact",
-  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "everforest.italicKeywords": true,
   "search.mode": "reuseEditor",
-  "search.smartCase": true
+  "search.smartCase": true,
+  "projectManager.sortList": "Recent",
+  "marscode.codeCompletionPro": {
+    "enableCodeCompletionPro": true
+  },
+  "marscode.chatLanguage": "cn",
+  "workbench.editor.tabActionCloseVisibility": false,
+  "breadcrumbs.enabled": false,
+  "workbench.productIconTheme": "icons-carbon",
+  "workbench.sideBar.location": "right",
+  "window.newWindowDimensions": "inherit",
+  "editor.snippetSuggestions": "top",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "vscode_custom_css.imports": [
+    "custom css or custom js"
+  ],
+  "window.commandCenter": false,
+  "workbench.statusBar.visible": false,
+  "workbench.layoutControl.enabled": false
 }

@@ -18,6 +18,11 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
     "command": "renameFile",
     "key": "r",
     "when": "filesExplorerFocus && !inputFocus"
@@ -209,11 +214,6 @@
     "when": "interactivePlaygroundFocus && !editorTextFocus"
   },
   {
-    "key": "ctrl+\\",
-    "command": "workbench.action.terminal.split",
-    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
-  },
-  {
     "key": "ctrl+j",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
@@ -231,7 +231,7 @@
   {
     "key": "ctrl+l",
     "command": "workbench.action.focusActiveEditorGroup",
-    "when": "terminalFocus"
+    "when": "terminalFocus || panelFocus"
   },
   {
     "key": "ctrl+j",
@@ -242,5 +242,30 @@
     "key": "ctrl+k",
     "command": "widgetNavigation.focusPrevious",
     "when": "inputFocus && navigableContainerFocused || navigableContainerFocused && treestickyScrollFocused || navigableContainerFocused && !listFocus || navigableContainerFocused && listScrollAtBoundary == 'both' || navigableContainerFocused && listScrollAtBoundary == 'top'"
+  },
+  {
+    "key": "o",
+    "command": "revealReference",
+    "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "showNextParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "showPrevParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "expand_region",
+    "when": "editorTextFocus && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "undo_expand_region",
+    "when": "editorTextFocus && editorHasSelection && vim.mode != 'Insert'"
   }
 ]
