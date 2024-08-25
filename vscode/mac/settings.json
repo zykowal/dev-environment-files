@@ -605,10 +605,6 @@
   "search.mode": "reuseEditor",
   "search.smartCase": true,
   "projectManager.sortList": "Recent",
-  "marscode.codeCompletionPro": {
-    "enableCodeCompletionPro": true
-  },
-  "marscode.chatLanguage": "cn",
   "workbench.editor.tabActionCloseVisibility": false,
   "breadcrumbs.enabled": false,
   "workbench.productIconTheme": "icons-carbon",
