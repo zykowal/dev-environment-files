@@ -38,20 +38,16 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "command": "workbench.action.toggleZenMode",
-    "key": "ctrl+z"
+    "key": "ctrl+s",
+    "command": "-workbench.action.files.save"
   },
   {
-    "command": "-workbench.action.files.save",
-    "key": "ctrl+s"
+    "key": "ctrl+s",
+    "command": "saveAll"
   },
   {
-    "command": "saveAll",
-    "key": "ctrl+s"
-  },
-  {
-    "command": "workbench.action.terminal.toggleTerminal",
     "key": "ctrl+\\",
+    "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
   },
   {
@@ -256,11 +252,34 @@
   {
     "key": "ctrl+w",
     "command": "expand_region",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && vim.mode != 'Insert'"
   },
   {
     "key": "ctrl+;",
     "command": "undo_expand_region",
-    "when": "editorTextFocus && editorHasSelection"
+    "when": "editorTextFocus && editorHasSelection && vim.mode != 'Insert'"
+  },
+  {
+    "key": "o",
+    "command": "revealReference",
+    "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "showNextParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "showPrevParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel"
   }
 ]

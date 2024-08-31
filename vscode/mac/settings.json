@@ -159,7 +159,7 @@
       ]
     }
   ],
-  "vim.normalModeKeyBindings": [
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
         "|"
@@ -235,21 +235,41 @@
     {
       "before": [
         "leader",
-        "t",
-        "c"
+        "u",
+        "q"
       ],
       "commands": [
-        "workbench.action.closePanel"
+        "workbench.actions.view.problems"
       ]
     },
     {
       "before": [
         "leader",
-        "t",
-        "p"
+        "u",
+        "s"
       ],
       "commands": [
-        "workbench.action.togglePanel"
+        "workbench.action.toggleStatusbarVisibility"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "u",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.openGlobalKeybindings"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "u",
+        "z"
+      ],
+      "commands": [
+        "workbench.action.toggleZenMode"
       ]
     },
     {
@@ -315,6 +335,16 @@
     {
       "before": [
         "leader",
+        "f",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    {
+      "before": [
+        "leader",
         "c"
       ],
       "commands": [
@@ -324,7 +354,38 @@
     {
       "before": [
         "leader",
+        "b",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsToTheLeft"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "b",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsToTheRight"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "b",
         "C"
+      ],
+      "commands": [
+        "workbench.action.closeAllEditors"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "b",
+        "c"
       ],
       "commands": [
         "workbench.action.closeOtherEditors"
@@ -348,7 +409,8 @@
       ],
       "commands": [
         "editor.action.rename"
-      ]
+      ],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
     },
     {
       "before": [
@@ -377,17 +439,6 @@
       ],
       "commands": [
         ":wq!"
-      ]
-    },
-    {
-      "before": [
-        "<c-a>"
-      ],
-      "after": [
-        "g",
-        "g",
-        "V",
-        "G"
       ]
     },
     {
@@ -505,20 +556,126 @@
     },
     {
       "before": [
-        "<leader>",
-        "u"
-      ],
-      "after": [
-        "~"
-      ]
-    },
-    {
-      "before": [
         "leader",
         "i"
       ],
       "commands": [
         "extension.toggleBool"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.toggle"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "l"
+      ],
+      "commands": [
+        "bookmarks.list"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "l"
+      ],
+      "commands": [
+        "bookmarks.list"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "L"
+      ],
+      "commands": [
+        "bookmarks.listFromAllFiles"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "L"
+      ],
+      "commands": [
+        "bookmarks.listFromAllFiles"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "c"
+      ],
+      "commands": [
+        "bookmarks.clear"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "C"
+      ],
+      "commands": [
+        "bookmarks.clearFromAllFiles"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "r"
+      ],
+      "commands": [
+        "bookmarks.refresh"
+      ]
+    },
+    {
+      "before": [
+        "[",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.jumpToPrevious"
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.jumpToNext"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
       ]
     }
   ],
@@ -541,22 +698,6 @@
     }
   ],
   "vim.visualModeKeyBindings": [
-    {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "^"
-      ]
-    },
-    {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
-    },
     {
       "before": [
         ">"
@@ -614,9 +755,10 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "vscode_custom_css.imports": [
-    "custom css or custom js"
+    "file:////Users/xxx/custom-vscode.css"
   ],
   "window.commandCenter": false,
   "workbench.statusBar.visible": false,
-  "workbench.layoutControl.enabled": false
+  "workbench.layoutControl.enabled": false,
+  "editor.renderWhitespace": "trailing"
 }

@@ -2,6 +2,7 @@
   "editor.suggestSelection": "first",
   "editor.suggest.preview": true,
   "editor.suggest.showDeprecated": true,
+  "editor.snippetSuggestions": "top",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorSurroundingLines": 5,
   "editor.autoIndent": "full",
@@ -11,7 +12,7 @@
   "editor.fontSize": 16,
   "editor.tabSize": 2,
   "editor.letterSpacing": 0.4,
-  "editor.lineHeight": 25,
+  "editor.lineHeight": 26,
   "editor.fontWeight": "300",
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
@@ -26,7 +27,6 @@
   "editor.largeFileOptimizations": false,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.tabCompletion": "onlySnippets",
-  "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "line",
   "editor.fontFamily": "Operator Mono, Fira Code",
   "editor.tokenColorCustomizations": {
@@ -87,23 +87,11 @@
   "debug.javascript.defaultRuntimeExecutable": {
     "pwa-node": "node"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.integrated.fontSize": 16,
-  "liveServer.settings.donotShowInfoMsg": true,
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.gpuAcceleration": "off",
   "files.autoGuessEncoding": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "terminal.integrated.env.windows": {},
-  "window.titleBarStyle": "custom",
-  "[go]": {
-    "editor.insertSpaces": false,
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    },
-    "editor.defaultFormatter": "golang.go"
-  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -126,7 +114,7 @@
     "source.addMissingImports": "explicit",
     "source.organizeImports": "explicit"
   },
-  "vim.showmodename": true,
+  "vim.showmodename": false,
   "vim.incsearch": true,
   "vim.easymotion": true,
   "vim.replaceWithRegister": true,
@@ -163,7 +151,7 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "\\"
+        "|"
       ],
       "after": [
         "<c-w>",
@@ -172,7 +160,7 @@
     },
     {
       "before": [
-        "|"
+        "\\"
       ],
       "after": [
         "<c-w>",
@@ -218,6 +206,15 @@
     {
       "before": [
         "leader",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ]
+    },
+    {
+      "before": [
+        "leader",
         "o"
       ],
       "commands": [
@@ -227,20 +224,81 @@
     {
       "before": [
         "leader",
-        "\\"
+        "u",
+        "q"
       ],
       "commands": [
-        "workbench.action.terminal.toggleTerminal"
+        "workbench.actions.view.problems"
       ]
     },
     {
       "before": [
         "leader",
-        "t",
-        "c"
+        "u",
+        "s"
       ],
       "commands": [
-        "workbench.action.closePanel"
+        "workbench.action.toggleStatusbarVisibility"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "u",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.openGlobalKeybindings"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "u",
+        "z"
+      ],
+      "commands": [
+        "workbench.action.toggleZenMode"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "f",
+        "H"
+      ],
+      "commands": [
+        "references-view.showCallHierarchy"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "f",
+        "R"
+      ],
+      "commands": [
+        "references-view.findReferences"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "f",
+        "r"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
       ]
     },
     {
@@ -266,6 +324,16 @@
     {
       "before": [
         "leader",
+        "f",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    {
+      "before": [
+        "leader",
         "c"
       ],
       "commands": [
@@ -275,7 +343,38 @@
     {
       "before": [
         "leader",
+        "b",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsToTheLeft"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "b",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsToTheRight"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "b",
         "C"
+      ],
+      "commands": [
+        "workbench.action.closeAllEditors"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "b",
+        "c"
       ],
       "commands": [
         "workbench.action.closeOtherEditors"
@@ -457,20 +556,108 @@
     },
     {
       "before": [
-        "<leader>",
-        "u"
-      ],
-      "after": [
-        "~"
-      ]
-    },
-    {
-      "before": [
         "leader",
         "i"
       ],
       "commands": [
         "extension.toggleBool"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.toggle"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "l"
+      ],
+      "commands": [
+        "bookmarks.list"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "l"
+      ],
+      "commands": [
+        "bookmarks.list"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "L"
+      ],
+      "commands": [
+        "bookmarks.listFromAllFiles"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "L"
+      ],
+      "commands": [
+        "bookmarks.listFromAllFiles"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "c"
+      ],
+      "commands": [
+        "bookmarks.clear"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "C"
+      ],
+      "commands": [
+        "bookmarks.clearFromAllFiles"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "m",
+        "r"
+      ],
+      "commands": [
+        "bookmarks.refresh"
+      ]
+    },
+    {
+      "before": [
+        "[",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.jumpToPrevious"
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.jumpToNext"
       ]
     }
   ],
@@ -553,17 +740,28 @@
   "git.openRepositoryInParentFolders": "never",
   "vsicons.dontShowNewVersionMessage": true,
   "liveServer.settings.donotVerifyTags": true,
-  "workbench.activityBar.location": "top",
+  "workbench.activityBar.location": "hidden",
   "workbench.startupEditor": "none",
-  "commentTranslate.source": "Bing",
-  "workbench.sideBar.location": "right",
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "workbench.iconTheme": "vscode-icons",
+  "workbench.productIconTheme": "icons-carbon",
   "debug.allowBreakpointsEverywhere": true,
   "telemetry.telemetryLevel": "off",
-  "window.density.editorTabHeight": "compact",
-  "workbench.colorTheme": "Everforest Dark",
-  "everforest.italicKeywords": true,
   "search.mode": "reuseEditor",
-  "search.smartCase": true
+  "search.smartCase": true,
+  "workbench.editor.tabActionCloseVisibility": false,
+  "vscode_custom_css.imports": [
+    "file:///c:/Users/xxx/.vscode/custom-vscode.css"
+  ],
+  "window.newWindowDimensions": "inherit",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "editor.renderWhitespace": "trailing",
+  "workbench.sideBar.location": "right",
+  "glassit.alpha": 250,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.cursorBlinking": "solid",
+  "workbench.statusBar.visible": false,
+  "window.commandCenter": false,
+  "window.menuBarVisibility": "compact",
+  "workbench.layoutControl.enabled": false
 }
