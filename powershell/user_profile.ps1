@@ -15,11 +15,8 @@ Import-Module -Name Terminal-Icons
 # PSReadLine
 # Get-Module PSReadLine -> check load PSReadLine status
 # Install-Module -Name PSReadLine -Scope CurrentUser
-Set-PSReadLineOption -EditMode Vi
+Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -BellStyle None
-Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
-Set-PSReadLineKeyHandler -Chord 'Ctrl+w' -Function BackwardDeleteWord
-Set-PSReadLineKeyHandler -Chord 'Ctrl+u' -Function DeleteLine
 Set-PSReadLineOption -PredictionSource History
 
 # Fzf
@@ -28,6 +25,8 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 
 # Alias
 Set-Alias -Name vim -Value nvim
+Set-Alias tig 'GIT_PATH\usr\bin\tig.exe'
+Set-Alias less 'GIT_PATH\usr\bin\less.exe'
 
 # which command like Unix
 function which ($command) {
