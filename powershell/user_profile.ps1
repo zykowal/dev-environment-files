@@ -25,8 +25,14 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 
 # Alias
 Set-Alias -Name vim -Value nvim
-Set-Alias tig 'GIT_PATH\usr\bin\tig.exe'
-Set-Alias less 'GIT_PATH\usr\bin\less.exe'
+Set-Alias -Name pwsh -Value powershell
+Set-Alias -Name tig -Value 'GIT_PATH\usr\bin\tig.exe'
+Set-Alias -Name less -Value 'GIT_PATH\usr\bin\less.exe'
+
+# Env
+$env:editor = 'nvim'
+$env:pager = 'less'
+$env:shell = 'powershell'
 
 # which command like Unix
 function which ($command) {

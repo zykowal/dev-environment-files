@@ -7,3 +7,6 @@ Personal dev environment config files
 3. alacritty
 4. zshrc
 5. make vscode like vim
+6. starship
+7. neovide
+8. powershell profile
