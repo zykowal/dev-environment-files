@@ -106,7 +106,7 @@
   flex-grow: 0;
   justify-content: flex-start;
   order: 0;
-  width: auto;
+  width: 5rem;
 }
 
 .shortcuts {
