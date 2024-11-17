@@ -4,12 +4,12 @@
     "command": "projectManager.listProjects"
   },
   {
-    "key": "ctrl+e",
+    "key": "ctrl+n",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
     "command": "workbench.files.action.focusFilesExplorer",
-    "key": "ctrl+e",
+    "key": "ctrl+n",
     "when": "editorTextFocus"
   },
   {
@@ -41,10 +41,6 @@
     "command": "deleteFile",
     "key": "d",
     "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "command": "workbench.action.toggleZenMode",
-    "key": "ctrl+z"
   },
   {
     "command": "-workbench.action.files.save",
@@ -120,7 +116,7 @@
     "when": "editorHasSignatureHelpProvider && editorTextFocus && vim.mode == 'Insert'"
   },
   {
-    "key": "ctrl+n",
+    "key": "ctrl+e",
     "command": "notifications.clearAll"
   },
   {
@@ -229,7 +225,7 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+l",
+    "key": "Escape",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus || panelFocus"
   },
@@ -267,5 +263,20 @@
     "key": "ctrl+;",
     "command": "undo_expand_region",
     "when": "editorTextFocus && editorHasSelection && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-expand_region",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "-undo_expand_region",
+    "when": "editorHasSelection && editorTextFocus"
+  },
+  {
+    "key": "alt+b",
+    "command": "-extension.toggleBool",
+    "when": "editorTextFocus"
   }
 ]
