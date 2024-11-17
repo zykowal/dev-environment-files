@@ -4,12 +4,12 @@
     "command": "projectManager.listProjects"
   },
   {
-    "key": "ctrl+e",
+    "key": "ctrl+n",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
     "command": "workbench.files.action.focusFilesExplorer",
-    "key": "ctrl+e",
+    "key": "ctrl+n",
     "when": "editorTextFocus"
   },
   {
@@ -49,10 +49,6 @@
     "key": "ctrl+\\",
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "workbench.action.files.newUntitledFile"
   },
   {
     "key": "ctrl+j",
@@ -258,6 +254,21 @@
     "key": "ctrl+;",
     "command": "undo_expand_region",
     "when": "editorTextFocus && editorHasSelection && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-expand_region",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "-undo_expand_region",
+    "when": "editorHasSelection && editorTextFocus"
+  },
+  {
+    "key": "alt+b",
+    "command": "-extension.toggleBool",
+    "when": "editorTextFocus"
   },
   {
     "key": "o",

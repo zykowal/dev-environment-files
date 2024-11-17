@@ -10,4 +10,4 @@ Installed plugins:
 6. Prettier
 7. Toggle Boolean
 8. vscode-icons
-9. Everforest
+9. Bookmarks

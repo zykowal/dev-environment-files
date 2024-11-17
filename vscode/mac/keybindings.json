@@ -116,8 +116,9 @@
     "when": "editorHasSignatureHelpProvider && editorTextFocus && vim.mode == 'Insert'"
   },
   {
-    "key": "ctrl+e",
-    "command": "notifications.clearAll"
+    "key": "ctrl+n",
+    "command": "notifications.clearAll",
+    "when": "vim.mode == 'Insert'"
   },
   {
     "key": "shift+k",
