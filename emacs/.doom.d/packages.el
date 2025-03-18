@@ -51,3 +51,4 @@
 (package! add-node-modules-path)
 (package! typescript-mode)
 (package! npm-mode)
+(package! lsp-tailwindcss :recipe (:host github :repo "merrickluo/lsp-tailwindcss"))
