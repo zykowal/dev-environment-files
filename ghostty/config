@@ -1,0 +1,24 @@
+font-family = IosevkaTerm Nerd Font
+font-size = 22
+cursor-style = block
+cursor-color = #ffffff
+cursor-style-blink = false
+cursor-invert-fg-bg = true
+shell-integration-features = no-cursor
+macos-window-shadow = false
+macos-titlebar-style = hidden
+macos-option-as-alt = true
+
+custom-shader = ./shaders/cursor_smear.glsl
+
+command = /opt/homebrew/bin/tmux
+
+mouse-hide-while-typing = true
+
+background-opacity = 0.6
+background-blur = 20
+
+theme = Dark Pastel
+
+confirm-close-surface = false
+window-decoration = true
